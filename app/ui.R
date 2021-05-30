@@ -2,8 +2,8 @@ library(shiny)
 
 shinyUI(fluidPage(
     # Navigation Bar
-    navbarPage("Navbar!",
-               tabPanel("Analysis",
+    navbarPage("Esports Earnings",
+               tabPanel("About",
                         column(4,
                                includeMarkdown("readme.Rmd")
                         )
@@ -38,9 +38,11 @@ shinyUI(fluidPage(
                        )
                    )
                ),
-               
                ## -------------------------------------
-               tabPanel("someone else's tab")
+               tabPanel("Analysis",
+                        textOutput("analysis")
+                ),
+               ## -------------------------------------
                
     )
 ))
