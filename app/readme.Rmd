@@ -1,0 +1,34 @@
+## INFO 201 Group BB-1
+##### Claudine Dulay, Darren Gunadharma, Harrison Fitch, Ryan Fournier
+
+### Data and Audience
+**What is the dataset you’ll be working with? Please include background on who collected the data, where you accessed it, and any additional information we should know about how this data came to be.**
+
+We will be working with Esports Earnings from 1998-2021 that takes a look at the money distributed in various Esports tournaments each month. Ran Kirsh, an Esports Earning Analyst, collected this data from http://esportsearnings.com and reorganized it on Kaggle in order to filter out games that do not meet earning and tournament restrictions.
+
+**Who is your target audience? Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should home in on one of these audiences.**
+
+The competitive gaming community would be interested in learning more about the history of cash prize pools throughout the years. Additionally, our audience would want to learn more about how the cash pools might look in the future, and whether these trends are increasing or decreasing. 
+
+### Technical Description
+**How will you be reading in your data (i.e., are you using an API, or is it a static .csv/.json file)?**
+
+We will be reading our data from a .csv file. The file can be found [here](https://www.kaggle.com/rankirsh/esports-earnings).
+
+**What types of data-wrangling (reshaping, reformatting, etc.) will you need to do to your data?**
+
+We will make our .csv file into a data frame while filtering unnecessary information and selecting the ones that are relevant. Eventually, we will use these data frames to make plots, graphs, and maybe maps, depending on how much information we are able to obtain.
+
+**What (major/new) libraries will be using in this project (no need to list common libraries that are used in many projects such as dplyr)**
+
+As of now, we don’t think that we will need any new libraries but this can potentially change in the near future. For now:
+1. library(tidyverse)
+2. library(maps)
+
+**What questions, if any, will you be answering with statistical analysis/machine learning?**
+
+We will be looking at statistics, such as the mean and median, of the player earnings data. This will help us make judgements about trends in the data to help answer questions regarding how earnings have changed throughout time.
+
+**What major challenges do you anticipate?**
+
+Some challenges we might run into are dealing with NA values, and possibly dealing with some merge conflicts. Some other challenges we might face is that the data we chose is not able to fully solve our issues and we might need to obtain other data files.

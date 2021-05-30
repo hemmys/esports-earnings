@@ -4,8 +4,10 @@ shinyUI(fluidPage(
     # Navigation Bar
     navbarPage("Navbar!",
                tabPanel("Analysis",
-                        textOutput("analysis")),
-               
+                        column(4,
+                               includeMarkdown("readme.Rmd")
+                        )
+               ),
                ## -------------------------------------
                ## Claudine's Code: Genre Observations
                tabPanel(
