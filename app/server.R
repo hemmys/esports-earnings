@@ -31,7 +31,7 @@ shinyServer(function(input, output) {
         summary(dataset)
     })
     
-    output$view <- renderTable({
+    output$obs <- renderTable({
         head(genreInput(), n = isolate(input$obs))
     })
     
