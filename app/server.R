@@ -72,8 +72,7 @@ shinyServer(function(input, output) {
                  y = "Total Earnings (US Dollars)",
                  title = "Total Earnings (US Dollars) vs Total Tournaments") +
             scale_y_continuous(labels = comma) +
-            theme(legend.position = "bottom") +
-            theme(aspect.ratio = 1)
+            theme(legend.position = "bottom") 
     })
     
     output$plot <- renderPlot({
