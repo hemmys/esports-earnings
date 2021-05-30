@@ -1,7 +1,7 @@
 library(shiny)
 library(dplyr)
 
-data <- read.csv("../data/GeneralEsportData.csv")
+data <- read.csv("data/GeneralEsportData.csv")
 
 shinyServer(function(input, output) {
     

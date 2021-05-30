@@ -1,0 +1,13 @@
+name: Esports
+title: Esports
+username:
+account: hemmys
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4206359
+bundleId: 4657536
+url: https://hemmys.shinyapps.io/Esports/
+when: 1622396802.40526
+lastSyncTime: 1622396802.40526
+asMultiple: FALSE
+asStatic: FALSE
