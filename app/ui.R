@@ -9,6 +9,11 @@ shinyUI(fluidPage(
                         )
                ),
                ## -------------------------------------
+               ## Analysis
+               tabPanel("Analysis",
+                        textOutput("analysis")
+               ),
+               ## -------------------------------------
                ## Claudine's Code: Genre Observations
                tabPanel(
                    "Genre Observations", sidebarLayout(
@@ -34,15 +39,12 @@ shinyUI(fluidPage(
                            
                            # Output: Header + table of distribution ----
                            h4("Observations"),
-                           tableOutput("view")
+                           tableOutput("obs")
                        )
                    )
                ),
                ## -------------------------------------
-               tabPanel("Analysis",
-                        textOutput("analysis")
-                ),
-               ## -------------------------------------
+               ## Darren's Code
                tabPanel(
                   "Total Earnings vs Total Tournaments",
                   sidebarLayout(
@@ -58,7 +60,19 @@ shinyUI(fluidPage(
                      plotOutput("plot")
                    )
                   )
+               ),
+               ## -------------------------------------
+               ## Harrison's Code
+               tabPanel("harrison's panel (change name)"
+                        # your code here
+               ),
+               
+               ## -------------------------------------
+               ## Ryan's Code
+               tabPanel("ryan's panel (change name)"
+                        # your code here
                )
+               ## -------------------------------------
     )
   )
 )
