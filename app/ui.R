@@ -43,6 +43,22 @@ shinyUI(fluidPage(
                         textOutput("analysis")
                 ),
                ## -------------------------------------
-               tabPanel("someones tab here")
+               tabPanel(
+                  "Total Earnings vs Total Tournaments",
+                  sidebarLayout(
+                    sidebarPanel(
+                     # drop down for genre type
+                     uiOutput("genre"),
+                     # slider input range for release date
+                     uiOutput("time")
+                   ),
+                   
+                   # Show a plot of the generated distribution
+                   mainPanel(
+                     plotOutput("plot")
+                   )
+                  )
                )
-))
+    )
+  )
+)
