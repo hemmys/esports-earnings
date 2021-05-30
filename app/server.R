@@ -1,5 +1,6 @@
 library(shiny)
 library(dplyr)
+library(ggplot2)
 
 data <- read.csv("data/GeneralEsportData.csv")
 
