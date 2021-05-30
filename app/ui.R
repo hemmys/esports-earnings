@@ -43,6 +43,6 @@ shinyUI(fluidPage(
                         textOutput("analysis")
                 ),
                ## -------------------------------------
-               
-    )
+               tabPanel("someones tab here")
+               )
 ))
