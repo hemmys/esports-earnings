@@ -63,7 +63,8 @@ shinyUI(fluidPage(
                ),
                ## -------------------------------------
                ## Harrison's Code
-               tabPanel("harrison's panel (change name)"
+               tabPanel("Genre vs. Total Earnings",
+                        
                         # your code here
                ),
                
