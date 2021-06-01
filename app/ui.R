@@ -39,7 +39,18 @@ shinyUI(fluidPage(
                            
                            # Output: Header + table of distribution ----
                            h4("Observations"),
-                           tableOutput("obs")
+                           tableOutput("obs"),
+                           
+                           # Description Area
+                           br(),
+                           
+                           p(strong("Data Table Visualization:"), "Using a data table given a certain amount of observations
+                           is appropriate for a selection of a specific genre versus the total online earnings and total tournament earnings
+                             because it will also give data of factors such as specific game, release date, total players, and total tournaments."),
+                           
+                           p(strong("Helpful Usage Tips:"), "As you can see in the summary, each genre has a specific numerical value of 'Length',
+                             meaning that that numerical value is the max amount of observations you can observe in that specific genre. Make sure
+                             that whenever you change the genre and/or amount of observations, you press 'Update View' to update Observations and Summary.")
                        )
                    )
                ),
