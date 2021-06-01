@@ -101,8 +101,22 @@ shinyUI(fluidPage(
                
                ## -------------------------------------
                ## Ryan's Code
-               tabPanel("ryan's panel (change name)"
-                        # your code here
+               tabPanel(
+                 "Total Earnings for Games In Specific Year",
+                 sidebarLayout(
+                   sidebarPanel(
+
+                     selectInput("yearInput", "Select Year",
+                                 choices = 1993:2010),
+
+                   ),
+                   
+
+                   mainPanel(
+
+                     plotOutput("earningsPlot")
+                   )
+                 )
                )
                ## -------------------------------------
     )

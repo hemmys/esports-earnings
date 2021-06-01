@@ -132,7 +132,23 @@ shinyServer(function(input, output) {
 })
     ##------------------------------------
     ## Ryan's Code
-    
-    # your code here
-    
+
+    years <- reactive({
+        data %>% 
+            filter(input$yearInput == ReleaseDate) %>% 
+            select(Game, TotalEarnings) %>% 
+            arrange(desc(TotalEarnings)) %>% 
+            head(10)
+    })
+
+    output$earningsPlot <- renderPlot({
+        ggplot(years(),aes(x = reorder(Game, -TotalEarnings), TotalEarnings, fill = Game))+
+            geom_histogram(stat = 'identity')+
+            theme(axis.text.x = element_text(angle = 90))+
+            ggtitle("Total Earnings per game for a given year")+
+            xlab("Game")+
+            ylab("Total Earnings")
+    })
+       
+
 })
