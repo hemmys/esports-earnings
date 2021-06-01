@@ -14,19 +14,19 @@ shinyServer(function(input, output) {
     })
     
     output$Tab1 <- renderText({
-        "Analysis for first tab"
+        paste("Analysis for first tab")
     })
     
     output$Tab2 <- renderText({
-        "Analysis for second tab"
+        paste("Analysis for second tab")
     })
     
     output$Tab3 <- renderText({
-        "Analysis for third tab"
+        paste("Analysis for third tab")
     })
     
     output$Tab4 <- renderText({
-        "Analysis for fourth tab"
+        paste("Analysis for fourth tab")
     })
     
     ## -------------------------------------
