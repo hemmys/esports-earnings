@@ -125,7 +125,7 @@ shinyUI(fluidPage(
                ## -------------------------------------
                ## Ryan's Code
                tabPanel(
-                 "Total Earnings for Games In Specific Year",
+                 "Year vs Total Earnings",
                  sidebarLayout(
                    sidebarPanel(
 
