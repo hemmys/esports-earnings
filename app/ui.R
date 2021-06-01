@@ -71,8 +71,9 @@ shinyUI(fluidPage(
                      plotOutput("plot"),
                      h4("Description"),
                      p("The scatter plot displayed above shows the relationship between the total earnings and the 
-                        total number of tournaments for the chosen genre of games and the selected release date year
-                        range. Each individual game is unique with its own color."),
+                        total number of tournaments for the chosen genre of games and the selected release year
+                        range. Each individual game is unique with its own color. Users are allowed to change the 
+                        game genre with the drop down menu and adjust the release year range with the slider."),
                      br(),
                      h4("Analysis"),
                      p("For the majority of the game genres, there isn't much of a correlation between total earnings
