@@ -46,7 +46,7 @@ shinyUI(fluidPage(
                ## -------------------------------------
                ## Darren's Code
                tabPanel(
-                  "Total Earnings vs Total Tournaments",
+                  "Total Tournaments vs Total Earnings",
                   sidebarLayout(
                     sidebarPanel(
                      # drop down for genre type
@@ -63,9 +63,40 @@ shinyUI(fluidPage(
                ),
                ## -------------------------------------
                ## Harrison's Code
-               tabPanel("Genre vs. Total Earnings",
+               tabPanel("Game vs Total Earnings",
                         
-                        # your code here
+                        # Sidebar for users to select Genre
+                        sidebarLayout(
+                          sidebarPanel("Options",
+                                       
+                                       selectInput("Genre", "Select Genre", 
+                                                   c("Battle Royale", "Collectible Card Game", 
+                                                     "Fighting Game", "First-Person Shooter", 
+                                                     "Multiplayer Online Battle Arena", 
+                                                     "Puzzle Game", "Racing", "Role-Playing Game", 
+                                                     "Sports", "Strategy", "Third-Person Shooter"), 
+                                                   selected = "Fighting Game")
+                                       
+                          ),
+                          
+                          # Show a plot of the generated data
+                          mainPanel(
+                            
+                            plotOutput("GenrePlot"),
+                            
+                            br(), br(), br(), br(),
+                            
+                            textOutput("Title"),
+                            
+                            br(),
+                            
+                            textOutput("Description"), 
+                            
+                            br(), 
+                            
+                            textOutput("Descend")
+                          )
+                        )
                ),
                
                ## -------------------------------------
