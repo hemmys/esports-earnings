@@ -137,7 +137,9 @@ shinyUI(fluidPage(
 
                    mainPanel(
 
-                     plotOutput("earningsPlot")
+                     plotOutput("earningsPlot"),
+                     br(),
+                     textOutput("earningsDescription")
                    )
                  )
                )
