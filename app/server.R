@@ -1,6 +1,8 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
+library(grid)
+library(gridExtra) 
 
 data <- read.csv("data/GeneralEsportData.csv")
 
@@ -71,17 +73,46 @@ shinyServer(function(input, output) {
         
         # creating the ggplot
         ggplot(plotData, aes(TotalTournaments, TotalEarnings)) +
-            geom_point(aes(col = plotData$Game), show.legend = FALSE) +
+            geom_point(aes(col = plotData$Game)) +
+            labs(x = "Total Tournaments",
+                 y = "Total Earnings (US Dollars)",
+                 title = "Total Tournaments and their Total Earnings (US Dollars)") +
+            scale_y_continuous(labels = comma) +
+            theme(legend.position = "none") 
+    })
+    
+    # creates the legend of the scatter plot as a whole new plot
+    legendPlot <- reactive({
+        # data manipulation
+        plotData <- data %>% 
+            filter(Genre == input$genres) %>% 
+            filter(ReleaseDate > input$release[1]) %>% 
+            filter(ReleaseDate < input$release[2])
+        
+        # creating the ggplot
+        plot <- ggplot(plotData, aes(TotalTournaments, TotalEarnings)) +
+            geom_point(aes(col = Game)) +
             labs(x = "Total Tournaments",
                  y = "Total Earnings (US Dollars)",
                  title = "Total Tournaments and their Total Earnings (US Dollars)") +
             scale_y_continuous(labels = comma) +
             theme(legend.position = "bottom") 
+        
+        # extracting the legend from the plot only so that the plot can be at a fixed size
+        legend <- cowplot::get_legend(plot)
+        
+        grid.newpage()
+        grid.draw(legend)
     })
     
     # renders plot to display
     output$plot <- renderPlot({
         scatterPlot()
+    })
+    
+    # renders legend to display
+    output$legend <- renderPlot({
+        legendPlot()
     })
     
     ## -------------------------------------

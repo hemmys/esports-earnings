@@ -64,13 +64,14 @@ shinyUI(fluidPage(
                      uiOutput("genre"),
                      # slider input range for release date
                      uiOutput("time")
-                   ),
+                     ),
                    
                    # Show a plot of the generated distribution
                    mainPanel(
                      plotOutput("plot"),
+                     plotOutput("legend"),
                      h4("Description"),
-                     p("The scatter plot displayed above shows the relationship between the total earnings and the 
+                     p("The scatter plot displayed shows the relationship between the total earnings and the 
                         total number of tournaments for the chosen genre of games and the selected release year
                         range. Each individual game is unique with its own color. Users are allowed to change the 
                         game genre with the drop down menu and adjust the release year range with the slider."),
@@ -82,7 +83,7 @@ shinyUI(fluidPage(
                         Games with more popularity will attract more attention, thus, allowing more tournaments to be
                         created. Popularity also comes with more sponsorships, meaning, larger prizes.")
                    )
-                  )
+                 )
                ),
                ## -------------------------------------
                ## Harrison's Code
