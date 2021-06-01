@@ -60,14 +60,19 @@ shinyServer(function(input, output) {
     
     # creates the scatter plot of total earnings vs total tournaments
     scatterPlot <- reactive({
+        
+        # to remove commas in the axis intervals
         require(scales)
+        
+        # data manipulation
         plotData <- data %>% 
             filter(Genre == input$genres) %>% 
             filter(ReleaseDate > input$release[1]) %>% 
             filter(ReleaseDate < input$release[2])
         
+        # creating the ggplot
         ggplot(plotData, aes(TotalTournaments, TotalEarnings)) +
-            geom_point(aes(col = plotData$Game)) +
+            geom_point(aes(col = plotData$Game), show.legend = FALSE) +
             labs(x = "Total Tournaments",
                  y = "Total Earnings (US Dollars)",
                  title = "Total Tournaments and their Total Earnings (US Dollars)") +
@@ -75,6 +80,7 @@ shinyServer(function(input, output) {
             theme(legend.position = "bottom") 
     })
     
+    # renders plot to display
     output$plot <- renderPlot({
         scatterPlot()
     })
