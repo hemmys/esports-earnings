@@ -11,7 +11,12 @@ shinyUI(fluidPage(
                ## -------------------------------------
                ## Analysis
                tabPanel("Analysis",
-                        textOutput("analysis")
+                        
+                        textOutput("AnalysisTitle"), br(),
+                        textOutput("Tab1"), br(),
+                        textOutput("Tab2"), br(),
+                        textOutput("Tab3"), br(),
+                        textOutput("Tab4")
                ),
                ## -------------------------------------
                ## Claudine's Code: Genre Observations

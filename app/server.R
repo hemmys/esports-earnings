@@ -9,8 +9,24 @@ data <- read.csv("data/GeneralEsportData.csv")
 shinyServer(function(input, output) {
     
     ## Analysis
-    output$analysis <- renderText({
-        "hello"
+    output$AnalysisTitle <- renderText({
+        paste("Data Analysis")
+    })
+    
+    output$Tab1 <- renderText({
+        "Analysis for first tab"
+    })
+    
+    output$Tab2 <- renderText({
+        "Analysis for second tab"
+    })
+    
+    output$Tab3 <- renderText({
+        "Analysis for third tab"
+    })
+    
+    output$Tab4 <- renderText({
+        "Analysis for fourth tab"
     })
     
     ## -------------------------------------
