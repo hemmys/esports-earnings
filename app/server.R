@@ -60,7 +60,6 @@ shinyServer(function(input, output) {
     
     # creates the scatter plot of total earnings vs total tournaments
     scatterPlot <- reactive({
-        
         # to remove commas in the axis intervals
         require(scales)
         

@@ -69,7 +69,17 @@ shinyUI(fluidPage(
                    # Show a plot of the generated distribution
                    mainPanel(
                      plotOutput("plot"),
-                     textOutput("analysis")
+                     h4("Description"),
+                     p("The scatter plot displayed above shows the relationship between the total earnings and the 
+                        total number of tournaments for the chosen genre of games and the selected release date year
+                        range. Each individual game is unique with its own color."),
+                     br(),
+                     h4("Analysis"),
+                     p("For the majority of the game genres, there isn't much of a correlation between total earnings
+                        and the total number of tournaments. However, there are a number of games that have been reported
+                        to have a larger number of earnings but this is solely based on the popularity of the games.
+                        Games with more popularity will attract more attention, thus, allowing more tournaments to be
+                        created. Popularity also comes with more sponsorships, meaning, larger prizes.")
                    )
                   )
                ),
