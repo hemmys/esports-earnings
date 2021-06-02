@@ -10,7 +10,7 @@ shinyUI(fluidPage(
                ),
                ## -------------------------------------
                ## Analysis
-               tabPanel("Analysis",
+               tabPanel("Conclusion",
                         
                         textOutput("AnalysisTitle"), br(),
                         textOutput("Tab1"), br(),
@@ -92,7 +92,7 @@ shinyUI(fluidPage(
                ),
                ## -------------------------------------
                ## Harrison's Code
-               tabPanel("Game vs Total Earnings",
+               tabPanel("Genre vs Total Earnings",
                         
                         # Sidebar for users to select Genre
                         sidebarLayout(
