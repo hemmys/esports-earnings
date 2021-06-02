@@ -4,7 +4,7 @@ shinyUI(fluidPage(
     # Navigation Bar
     navbarPage("Esports Earnings",
                tabPanel("About",
-                        column(4,
+                        column(12,
                                includeMarkdown("readme.Rmd")
                         )
                ),
@@ -101,7 +101,7 @@ shinyUI(fluidPage(
                                                      "Multiplayer Online Battle Arena", 
                                                      "Puzzle Game", "Racing", "Role-Playing Game", 
                                                      "Sports", "Strategy", "Third-Person Shooter"), 
-                                                   selected = "Fighting Game")
+                                                   selected = "Racing")
                                        
                           ),
                           
@@ -133,7 +133,7 @@ shinyUI(fluidPage(
                    sidebarPanel(
 
                      selectInput("yearInput", "Select Year",
-                                 choices = 1993:2019),
+                                 choices = 1993:2019, selected = 2019),
 
                    ),
                    

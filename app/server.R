@@ -40,12 +40,12 @@ shinyServer(function(input, output) {
         paste("Analysis for Genre vs Total Earnings: There seems to be a slight correlation 
         between Genre and Total Earnings. The Sports and Racing genres have 
         significantly lower total earnings. Comparatively, the Fighting Game, 
-        First and Third-Person Shooters, and Multiplayer Online Battle Arena 
-        genres all had top earnings over 2 million dollars. This shows that 
+        First and Third-Person Shooters, and Battle Royale genres all had top 
+        earnings over higher than Sports and Racing. This shows that 
         there is much stonger viewership, and therefore funds, for combat
         games in esports. Collectilbe Card Games and Strategy were two genres 
-        that have moderate earnings(between sports and shooters) which is 
-        interesting. Overall, First-Person Shooter was the genre that had 
+        that have moderate earnings (between sports and shooters) which is 
+        interesting. Overall, Multiplayer Online Battle Arena was the genre that had 
         the most earnings among the top 5 games in said category.")
     })
     
