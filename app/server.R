@@ -83,9 +83,10 @@ shinyServer(function(input, output) {
         
         # data manipulation
         plotData <- data %>% 
-            filter(Genre == input$genres) %>% 
+            select(TotalEarnings, TotalTournaments, Genre, ReleaseDate, Game) %>% 
             filter(ReleaseDate > input$release[1]) %>% 
-            filter(ReleaseDate < input$release[2])
+            filter(ReleaseDate < input$release[2]) %>% 
+            filter(Genre == input$genres)
         
         # creating the ggplot
         ggplot(plotData, aes(TotalTournaments, TotalEarnings)) +
@@ -101,9 +102,10 @@ shinyServer(function(input, output) {
     legendPlot <- reactive({
         # data manipulation
         plotData <- data %>% 
-            filter(Genre == input$genres) %>% 
+            select(TotalEarnings, TotalTournaments, Genre, ReleaseDate, Game) %>% 
             filter(ReleaseDate > input$release[1]) %>% 
-            filter(ReleaseDate < input$release[2])
+            filter(ReleaseDate < input$release[2]) %>% 
+            filter(Genre == input$genres)
         
         # creating the ggplot
         plot <- ggplot(plotData, aes(TotalTournaments, TotalEarnings)) +
