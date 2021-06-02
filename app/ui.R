@@ -16,7 +16,10 @@ shinyUI(fluidPage(
                         textOutput("Tab1"), br(),
                         textOutput("Tab2"), br(),
                         textOutput("Tab3"), br(),
-                        textOutput("Tab4")
+                        textOutput("Tab4"), br(),
+                        textOutput("implications"), br(),
+                        textOutput("dataQuality"), br(),
+                        textOutput("advancements"), br(),
                ),
                ## -------------------------------------
                ## Claudine's Code: Genre Observations
@@ -80,13 +83,7 @@ shinyUI(fluidPage(
                    # Show a plot of the generated distribution
                    mainPanel(
                      plotOutput("plot"),
-                     plotOutput("legend"),
-                     h4("Analysis"),
-                     p("For the majority of the game genres, there isn't much of a correlation between total earnings
-                        and the total number of tournaments. However, there are a number of games that have been reported
-                        to have a larger number of earnings but this is solely based on the popularity of the games.
-                        Games with more popularity will attract more attention, thus, allowing more tournaments to be
-                        created. Popularity also comes with more sponsorships, meaning, larger prizes.")
+                     plotOutput("legend")
                    )
                  )
                ),

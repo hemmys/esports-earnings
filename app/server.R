@@ -25,7 +25,15 @@ shinyServer(function(input, output) {
     })
     
     output$Tab2 <- renderText({
-        paste("Analysis for Total Tournaments vs Total Earnings: ")
+        paste("Analysis for Total Tournaments vs Total Earnings: For the majority of the game genres, 
+        there isn't much of a correlation between total earnings and the total number of tournaments.
+        Logically, there should be more earnings when there are more tournaments, however, this isn't 
+        entirely true. From the Total Tournaments vs Total Earnings plot, the total amount of earnings 
+        was majorly impacted by specific games. Thus, this implies that total earnings from Esports is 
+        solely based on the popularity of the games. Games with more popularity will attract more attention, 
+        allowing more tournaments to be created. Therefore, the increasing relationship between total number
+        of tournaments and total amount of earnings is a complete coincidence.")
+        
     })
     
     output$Tab3 <- renderText({
@@ -49,6 +57,27 @@ shinyServer(function(input, output) {
               That means that if if a game had a higher earnings, it was likely more 
               popular than the other games of that year. That means you can conclude 
               from the table what the most popular game of the year was.")
+    })
+    
+    output$implications <- renderText({
+        paste("Implications: Analyzing Esports Earnings data is important because of it's 
+               novel nature as a career. More and more young people, as well as young companies, 
+               are becoming involved in Esports and related activities, so summarizing historical 
+               data helps display trends.")
+    })
+    
+    output$dataQuality <- renderText({
+        paste("Data Quality: The Esports Earnings data includes a broad overview of total statistics but
+               does not include specific variables of Esports Gamers. For example, variable like race, 
+               ethnicity and age are not included in this data set. These types of variables may be a major 
+               impact towards the relationship and may additionally, further improve our analysis.")
+    })
+    
+    output$advancements <- renderText({
+        paste("Advancements: Ways to advance the project could include total sales of the game, total active 
+               players, and the biggest single payout for the specific game. We could then use this data to 
+               select only the most popular games and graph that and their earnings. We could also group by 
+               just the tournament and calculate the total earnings for specific tournaments that have occurred.")
     })
     
     ## -------------------------------------
