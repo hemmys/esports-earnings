@@ -10,19 +10,26 @@ shinyServer(function(input, output) {
     
     ## Analysis
     output$AnalysisTitle <- renderText({
-        paste("Data Analysis")
+        paste("Concluding Statements for Esports Earnings")
     })
     
     output$Tab1 <- renderText({
-        paste("Analysis for first tab: ")
+        paste("Analysis for Genre Observations: The chart (data table of observations) 
+        answers the total amount of online earnings AND the total earnings with 
+        their total amount of players and total tournaments given the specified genre. 
+        This will help those who are viewing the chart understand how a specific number 
+        of players and tournaments impact the earning amount for online and overall.
+        Given the data table, we can analyze that the more total players there are, 
+        there tends to be a greater amount of tournaments, and with the more amount of
+        tournaments, it is distinct that there will be more earnings in play.")
     })
     
     output$Tab2 <- renderText({
-        paste("Analysis for second tab: ")
+        paste("Analysis for Total Tournaments vs Total Earnings: ")
     })
     
     output$Tab3 <- renderText({
-        paste("Analysis for third tab: There seems to be a slight correlation 
+        paste("Analysis for Genre vs Total Earnings: There seems to be a slight correlation 
         between Genre and Total Earnings. The Sports and Racing genres have 
         significantly lower total earnings. Comparatively, the Fighting Game, 
         First and Third-Person Shooters, and Multiplayer Online Battle Arena 
@@ -35,7 +42,7 @@ shinyServer(function(input, output) {
     })
     
     output$Tab4 <- renderText({
-        paste("Analysis for fourth tab: This plot shows you the highest earnings
+        paste("Analysis for Year vs Total Earnings: This plot shows you the highest earnings
               for a specific game given a year. There is not much of a connection
               between the data as it is just showing the total earnings per game. 
               The only possible takeaway from this data is how popular the game was. 
