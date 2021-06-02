@@ -35,7 +35,13 @@ shinyServer(function(input, output) {
     })
     
     output$Tab4 <- renderText({
-        paste("Analysis for fourth tab: ")
+        paste("Analysis for fourth tab: This plot shows you the highest earnings
+              for a specific game given a year. There is not much of a connection
+              between the data as it is just showing the total earnings per game. 
+              The only possible takeaway from this data is how popular the game was. 
+              That means that if if a game had a higher earnings, it was likely more 
+              popular than the other games of that year. That means you can conclude 
+              from the table what the most popular game of the year was.")
     })
     
     ## -------------------------------------
