@@ -21,9 +21,7 @@ We will make our .csv file into a data frame while filtering unnecessary informa
 
 **What (major/new) libraries will be using in this project (no need to list common libraries that are used in many projects such as dplyr)**
 
-As of now, we don’t think that we will need any new libraries but this can potentially change in the near future. For now:
-1. library(tidyverse)
-2. library(maps)
+As of now, we don’t think that we will need any new libraries but this can potentially change in the near future. For now, we will be using old libraries like dplyr, shiny and ggplot2 and new libraries such as grid and grid extra.
 
 **What questions, if any, will you be answering with statistical analysis/machine learning?**
 
