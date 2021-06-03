@@ -4,8 +4,10 @@ shinyUI(fluidPage(
     # Navigation Bar
     navbarPage("Esports Earnings",
                tabPanel("About",
-                        column(12,
+                        column(12,tags$img(src="esport.png",
+                                        width = 800, length = 400),
                                includeMarkdown("readme.Rmd")
+                               
                         )
                ),
                ## -------------------------------------
