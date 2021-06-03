@@ -58,7 +58,10 @@ shinyUI(fluidPage(
                            
                            p(strong("Helpful Usage Tips:"), "As you can see in the summary, each genre has a specific numerical value of 'Length',
                              meaning that that numerical value is the max amount of observations you can observe in that specific genre. Make sure
-                             that whenever you change the genre and/or amount of observations, you press 'Update View' to update Observations and Summary.")
+                             that whenever you change the genre and/or amount of observations, you press 'Update View' to update Observations and Summary."),
+                           p(strong("Description:"), "The data table displayed shows the relationship between all the relevant variables of total earnings and
+                             total online earnings, and how they correspond to the amount of players and tournaments given a specific genre. Each individual
+                             genre is also supplied with many various titled games in the desired genre category.")
                        )
                    )
                ),
