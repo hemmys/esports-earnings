@@ -9,19 +9,6 @@ shinyUI(fluidPage(
                         )
                ),
                ## -------------------------------------
-               ## Analysis
-               tabPanel("Conclusion",
-                        
-                        textOutput("AnalysisTitle"), br(),
-                        textOutput("Tab1"), br(),
-                        textOutput("Tab2"), br(),
-                        textOutput("Tab3"), br(),
-                        textOutput("Tab4"), br(),
-                        textOutput("implications"), br(),
-                        textOutput("dataQuality"), br(),
-                        textOutput("advancements"), br(),
-               ),
-               ## -------------------------------------
                ## Claudine's Code: Genre Observations
                tabPanel(
                    "Genre Observations", sidebarLayout(
@@ -148,6 +135,19 @@ shinyUI(fluidPage(
                      textOutput("earningsDescription")
                    )
                  )
+               ),
+               ## -------------------------------------
+               ## Analysis
+               tabPanel("Conclusion",
+                        
+                        textOutput("AnalysisTitle"), br(),
+                        textOutput("Tab1"), br(),
+                        textOutput("Tab2"), br(),
+                        textOutput("Tab3"), br(),
+                        textOutput("Tab4"), br(),
+                        textOutput("implications"), br(),
+                        textOutput("dataQuality"), br(),
+                        textOutput("advancements"), br(),
                )
                ## -------------------------------------
     )
