@@ -257,7 +257,7 @@ shinyServer(function(input, output) {
     
     output$earningsDescription <- renderText({
         paste("This graph shows you the highest total earnings for the top 10 games in a specific year. 
-              There is data available between the years of 1993 through 2010. 
+              There is data available between the years of 1993 through 2019. 
               In some of the earlier years, there was not 10 games to show, so instead, it'll show all available games. 
               Data is sorted so it'll show it in descending order, meaning the highest earning game is on the far left. 
               The data defaults to 1993, but using the drop down bar, you can change the graph to show different years.")
